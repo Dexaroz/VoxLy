@@ -36,25 +36,9 @@ Practicing presentations alone is hard: you can't watch yourself speak and judge
 
 ## 🏗️ Architecture
 
-```
-+---------------------------+
-|         frontend         |   React 19 . TypeScript . Vite . Tailwind CSS
-|   (dashboard, sessions,  |
-|   recorder, progress)    |
-+-------------+-------------+
-              | REST
-+-------------v-------------+        +----------------------------+
-|          backend          |  REST  |         ai service         |
-|   Java 21 . Spring Boot   +------->|   Python . FastAPI         |
-|  auth . sessions . files  |<-------+   MediaPipe . OpenCV       |
-|  evaluation . feedback    |        |   OpenAI Whisper/GPT       |
-+-------+-----------+-------+        +--------------+-------------+
-        |           |                               |
-+-------v----+ +-----v------+              pose / gesture / speech
-| PostgreSQL | | Cloudflare |                     analysis
-|   (Neon)   | | R2 (files) |
-+------------+ +------------+
-```
+<div align="center">
+<img src="diagram.png" alt="VoxLy architecture diagram" width="700">
+</div>
 
 The **backend** is the core API: it handles authentication, sessions, and orchestrates calls to the **AI service**, which performs speech transcription and computer-vision gesture analysis and returns structured results (transcript, gesture events, score, annotated video). Video files are stored in **Cloudflare R2**, structured data in **PostgreSQL**, and the **frontend** talks to the backend over REST.
 
