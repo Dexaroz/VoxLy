@@ -34,6 +34,18 @@ Practicing presentations alone is hard: you can't watch yourself speak and judge
 - **Session management & progress tracking**: create, organize, and revisit practice sessions, and follow your improvement across time.
 - **Authentication & personalization**: secure JWT-based login, account settings, and password reset.
 
+## 📸 Screenshots
+
+<div align="center">
+<img src="screenshot-landing.png" alt="VoxLy landing page" width="900">
+<br><br>
+<img src="screenshot-dashboard.png" alt="VoxLy dashboard" width="900">
+<br><br>
+<img src="screenshot_analysis1.png" alt="VoxLy session analysis - scores and timeline" width="900">
+<br><br>
+<img src="screenshot_analysis2.png" alt="VoxLy session analysis - body language detection and annotated video" width="900">
+</div>
+
 ## 🏗️ Architecture
 
 <div align="center">
